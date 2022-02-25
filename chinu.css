@@ -491,11 +491,30 @@ body{
 
 
 #quote p{
+    margin: auto;
     position: relative;
     top: 180px;
     font-size: 2rem;
     font-family: 'Josefin Slab', serif;
+    /* width: 0ch; */
+}
+#quote p:nth-child(1){
     text-align: center;
+}
+#quote #author{
+    overflow: hidden;
+    white-space:nowrap;
+    text-align: center;
+    /* animation: text 5s forwards steps(30); */
+}
+
+@keyframes text{
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 14ch;
+    }
 }
 #quote::before{
     content: "";
