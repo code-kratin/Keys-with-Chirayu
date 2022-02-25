@@ -8,14 +8,11 @@ function func(x) {
 //     y.classList.toggle("mode");
 // }
 
-let v=0;
 let section= document.getElementById("quote");
 let content= document.querySelector("#author");
 window.addEventListener("scroll",()=>{
     const sectionPos= section.getBoundingClientRect().bottom;
     const screenPos= window.innerHeight;
-    // v=v+1;
-    console.log(v);
     if (sectionPos< screenPos){
         content.style.animationName="text";
         content.style.animationDuration="5s";
