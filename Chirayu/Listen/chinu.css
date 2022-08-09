@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Chelsea+Market&family=Fredoka+One&family=Mochiy+Pop+P+One&family=Poppins:wght@200;300&family=Tajawal:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,300&display=swap');
+
+/*Navbar*/
+*{
+    margin: 0px;
+    --bgcolor: black;
+    --navcolor: #252424;
+    --white-color: white;
+    --navtextcolor: #cccccc;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    color: var(--white-color);
+    background-color: var(--bgcolor);
+}
+/* .mode{
+    --bgcolor: white;
+    --navcolor: #cacaca;
+    --white-color: black;
+    --navtextcolor: #333333; 
+} */
+
+.nav{
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+}
+#navbar{
+   background-color: var(--navcolor); 
+   height: 65px;    
+   /* border: 2px solid rgb(255, 255, 255); */
+   color: rgb(255, 255, 255);
+   display: flex;
+   justify-content: center;
+   z-index: +4;
+
+   justify-content: space-between;
+   align-items: center;
+}
+.channelname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar .channelname #logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    /* position: relative; */
+    /* right: 160px;
+    top: 5px; */
+}
+#navbar span{
+    font-size: 1.8rem;
+    /* font-family: 'Tajawal', sans-serif; */
+    font-family: 'Architects Daughter';
+    font-weight: 0.1;
+}
+#navbar .list{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */ /*WHY NOT WORKING*/
+    /* display: grid; */    /*this make the underline animation weird*/
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* grid-gap: 50px; */
+    font-family: 'Poppins', sans-serif;
+    /* align-items:center;
+    justify-content: center; */
+    position: relative;
+    right: 80px;
+}
+#navbar .list li{
+    list-style-type: none;
+    margin-left: 60px;
+    position: relative;    /*I M P O R T A N T*/
+}
+#navbar #sociallinks a i{
+    font-size: 1.7rem;
+    position: relative;
+    /* left: 350px; */
+    padding: 5px;
+    color: white;
+}
+#navbar #sociallinks a i:hover{
+    color: #cccccc;
+}
+
+#navbar .list li a{
+    color: var(--navtextcolor);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+#navbar .list li a:hover{
+    color: var(--white-color);
+    /* border-bottom: 2px solid white; */
+}
+#navbar .list li a::before{      /*OR after*/
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 162, 255);
+    height: 2px;
+    width: 0%;
+    left: 0px;
+    bottom: -3px;
+    transition: all 0.3s ease-in-out;
+}
+#navbar .list li a:hover::before{
+    width: 100%;
+}
+
+/*
+#navbar{
+   background-color: #252424; 
+   height: 59px;    
+   /* border: 2px solid rgb(255, 255, 255); */ /*
+   color: rgb(255, 255, 255);
+   position: sticky;
+   top: 0px;
+   display: flex;
+   justify-content: center;
+   z-index: +4;
+
+   /* display:  */ /*
+}
+#navbar #logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    position: relative;
+    right: 160px;
+    top: 5px;
+}
+#navbar span{
+    font-size: 2rem;
+    font-family: 'Tajawal', sans-serif;
+}
+#navbar ul li{
+    list-style-type: none;
+    margin-left: 90px;
+    position: relative;
+    left: 90px;
+}
+#navbar ul img{
+    height: 35px;
+    width: 35px;
+    border-radius: 100px;
+    position: relative;
+    left: 350px;
+    padding: 10px;
+    filter:invert(50);
+}
+#navbar ul img:hover{
+    filter:invert(0);
+}
+#navbar ul{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -190px;
+}
+#navbar ul li a{
+    color: #cccccc;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: white;
+    /* border-bottom: 2px solid white; 
+} 
+#navbar ul li a::before{      /*OR after*/  /*
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 162, 255);
+    height: 2px;
+    width: 0%;
+    left: 0px;
+    bottom: -3px;
+    transition: all 0.3s ease-in-out;
+}
+#navbar ul li a:hover::before{
+    width: 100%;
+}*/
+
+#home{
+    height: 800px;
+    color: white;
+}
+#home #headname{
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-top: 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    font-family: 'IM Fell English SC', serif;
+}
+#home #headname h2{
+    color: white;
+}
+#desc span{
+    color: white;
+}
+#headname h2:nth-child(1){
+    animation-name: name;
+    animation-duration: 2s;
+    /* animation-timing-function: ease-out; */
+}
+#headname h2:nth-child(2){
+    animation-name: name;
+    animation-duration: 4s;
+    /* animation-timing-function: ease-out; */
+}
+#headname h2:nth-child(3){
+    animation-name: name;
+    animation-duration: 6s;
+    /* animation-timing-function: ease-out; */
+}
+#headname h2:nth-child(4){
+    animation-name: name;
+    animation-duration: 8s;
+    /* animation-timing-function: ease-out; */
+}
+#headname h2:nth-child(5){
+    animation-name: name;
+    animation-duration: 10s;
+    /* animation-timing-function: ease-out; */
+}
+#headname h2:nth-child(6){
+    animation-name: name;
+    animation-duration: 12s;
+    /* animation-timing-function: ease-out; */
+}
+#headname h2:nth-child(7){
+    animation-name: name;
+    animation-duration: 14s;
+    /* animation-timing-function: ease-out; */
+}
+
+#home h2{
+    font-size: 5rem;
+    font-weight: 10;
+}
+
+#home::before{
+    content: "";
+    background-image: url('https://cdn.wallpapersafari.com/68/86/d4k0cU.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+    position: absolute;
+    top: 120px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    animation: name 8s ease;
+}
+#desc{
+    color: var(--white-color);
+    margin-top: 100px;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Tajawal', sans-serif;
+    margin-left: 100px;
+    animation-name: name;
+    animation-duration: 8s;
+}
+.more{
+    font-family: 'Tajawal', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.more h1{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 3rem;
+    font-family: 'Tajawal', sans-serif;
+}
+.more img{
+    height: 70%;
+    width: 70%;
+}
+.more p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.more a{
+    padding: 10px;
+    font-size: 2rem;
+    color: var(--white-color);
+}
+.more a:hover{
+    color: rgb(255, 222, 160);
+}
+
+.show::before{
+    content: "";
+    background-image: url('http://images.freecreatives.com/wp-content/uploads/2016/04/He-plays-piano-in-the-Dark-Wallpaper.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 50%;
+}
+#head{
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 50;
+    text-align: center;
+    color: var(--white-color);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0)
+}
+
+
+#invite{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    border: 2px solid rgba(204, 197, 135, 0);
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: honeydew;
+}
+
+.form input:focus{
+    width: 250px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.form input::placeholder{
+    color: rgb(255, 255, 255);
+}
+.form input{
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center; 
+    display: block;
+    width: 200px;
+    padding: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    /* margin: 10px auto; */
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.btn{
+    font-size: 1.2rem;
+    margin: 40px 0px;
+    padding: 5px 20px;
+    background-color: rgba(0, 255, 221, 0);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgba(0, 255, 242, 0.11);
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px rgb(0, 132, 255);
+}
+
+
+#status {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+    position: relative;
+    bottom: 150px;
+  }
+  #status.success {
+      font-size: 1.2rem;
+    background-color: rgb(153, 255, 0);
+    color: black;
+    animation: status 4s ease forwards;
+  }
+  #status.error {
+    background-color: rgb(250, 129, 92);
+    color: black;
+    animation: status 4s ease forwards;
+  }
+
+  @keyframes status {
+    0% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    90% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+
+
+#contact-head {
+    font-size: 3rem;
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+    font-weight: 100;
+    /* margin-top: 50px; */
+}
+#contact-head2 {
+    font-size: 1.5rem;
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+    margin: 10px;
+    font-weight: 100;
+}
+
+.contact-section{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 2fr; */
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-section::before{
+    content: "";
+    background-image: url('https://i.stack.imgur.com/sP7nK.png');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    z-index: -1;
+    opacity: 60%;
+}
+.contact-section i{
+    font-size: 60px;
+    margin: 20px;
+    margin-top: 80px;
+}
+.contact-section div{
+    margin: 10px;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-media i{
+    font-size: 2rem;
+    position: relative;
+    margin: 40px;
+    /* filter:invert(50); */
+    color: white;
+    /* border: 1px solid white; */
+    padding: 5px;
+    border-radius: 50%;
+}
+.social-media i:hover{
+    color: rgb(176, 176, 176);
+}
+
+
+#quote p{
+    margin: auto;
+    position: relative;
+    top: 180px;
+    font-size: 2rem;
+    font-family: 'Josefin Slab', serif;
+    /* width: 0ch; */
+}
+#quote p:nth-child(1){
+    text-align: center;
+}
+#quote #author{
+    overflow: hidden;
+    white-space:nowrap;
+    text-align: center;
+    /* animation: text 5s forwards steps(30); */
+}
+
+@keyframes text{
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 14ch;
+    }
+}
+
+
+#quote::before{
+    content: "";
+    background-image: url('https://www.mashed.com/img/gallery/the-untold-truth-of-seasons-52/some-seasons-52-restaurants-once-featured-piano-bars-1606332422.jpg');
+    position: absolute;
+    left: 160px;
+    transform: translateY(30px);
+    height: 70%;
+    width: 80%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(1px);
+    filter: brightness(0.6);
+    z-index: -9;
+    transform: rotate(50deg);
+    /*TO CROP*/
+    /* display: block; */
+    /* bottom: -10%; */
+}
+
+body{
+    animation: transition-in 0.5s;
+}
+@keyframes transition-in{
+    from{
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes name{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
+
+
+footer p{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: #000000;
+    /* position: relative;
+    top: 100px; */
+    
+}
+footer{
+    position: relative;
+    top: 30px;
+}
+
+
+
+@media only screen and (max-width:1600px){
+    .contact-header {
+        margin-top: 250px;
+    }
+}
+@media only screen and (max-width:1050px) {
+    #navbar .list li a{
+        font-size: 1rem;
+    }
+    #navbar #sociallinks a i{
+        font-size: 1.3rem;
+    }
+    #navbar span{
+        font-size: 1.3rem;
+    }
+    #navbar .list{
+        right: 30px;
+    }
+    #navbar .channelname #logo{
+        width: 35px;
+        height: 35px;
+    }
+    /*----------------------------*/
+    .show::before{
+        background-attachment: local;
+        background-size: cover;
+    }
+}
+@media only screen and (max-width:805px){
+    #navbar #sociallinks a i{
+        display: none;
+    }
+
+}
+@media only screen and (max-width:660px){
+    #navbar .list li{
+        display: none;
+    }
+    .channelname{
+        margin: auto;
+    }
+    .nav{
+        background-color: var(--navcolor); 
+
+        /* border: 2px solid rgb(255, 255, 255); */
+        color: rgb(255, 255, 255);
+        position: sticky;
+        top: 0px;
+        z-index: +4;
+     
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+    .barmenu{
+        display: flex;
+        flex-direction: column;
+        float: left;
+        margin-top: 22px;
+        /* margin-left: 5px; */
+        cursor: pointer;
+    }
+    .bar{
+        background-color: var(--white-color);
+        width: 15px;
+        height: 0.5px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    /* .menu{
+        
+    } */
+    #quote p{
+        font-size: 1rem;
+    }
+    #quote{
+        text-align: initial;
+    }
+    #quote::before{
+        background-image: url('https://th.bing.com/th/id/OIP.j909fsPWrEYB6JZnMBq7hQHaE7?pid=ImgDet&rs=1');
+        left: 0px;
+        filter: blur(2px);
+        opacity: 90%;
+        margin-top: 70px;
+        width: 100%;
+        height: 30%;
+        z-index: -9;
+        transform: rotate(0deg);
+    }
+}
+@media only screen and (max-width:870px) {
+    .contact-section div{
+        font-size: 1rem;
+    }
+    .contact-section i{
+        font-size: 40px;
+    }
+    .social-media i{
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+    /*------------------------------------------------*/
+    #home #headname{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    #home h2{
+        font-size: 4rem;
+        font-weight: 100;
+    }
+    .more{
+        margin-bottom: 20px;
+    }
+    .more h1{
+        font-size: 2rem;
+    }
+    .more p{
+        font-size: 1rem;
+    }
+    .more a{
+        font-size: 1.2rem;
+    }
+    #desc{
+        font-size: 1.5rem;
+        /* text-align: center; */
+    }
+    #invite{
+        font-size: 1rem;
+        margin: auto; 
+        /* width: 50%; */
+        border-radius: 5px;
+    }
+    .show::before{
+        background-attachment: local;
+        background-size: cover;
+    }
+    #head{
+        font-size: 2.5rem;
+    }
+    footer{
+        top: 100px;
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width:490px){
+    #contact-head {
+        font-size: 2rem;
+    }
+    #contact-head2 {
+        font-size: 1rem;
+    }
+    .contact-section i{
+        font-size: 30px;
+    }
+    .contact-section div{
+        font-size: 0.6rem;
+    }
+    .contact-section h3{
+        font-size: 1rem;
+    }
+    /*--------------------------------*/
+    #home h2{
+        font-size: 3rem;
+    }
+    #head{
+        font-size: 1.8rem;
+    }
+    #home::before{
+        top: 50px;
+    }
+}
+
+@media only screen and (max-width:349px){
+    .contact-section i{
+        font-size: 20px;
+    }
+    .contact-section div{
+        font-size: 0.4rem;
+    }
+    .contact-section h3{
+        font-size: 0.7rem;
+    }
+    .social-media img{
+        height: 20px;
+        width: 20px;
+    }
+
+    footer{
+        top: 150px;
+        font-size: 0.5rem;
+    }
+}
+
+
+.menu{
+    display: none;
+}
+@media only screen and (max-width:644px){
+.change .menu{
+    display: block;
+    background-color: var(--bgcolor);
+    
+    width: 170px;
+    height: 100vh;
+
+    animation-name: sidemenu;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    
+
+    /* transition: all 2s ease-in-out; */
+
+    position: absolute;   /*For making the side menu independent of the page*/
+    top: 0px;
+    z-index: 5;
+}
+
+.change .bar{
+    transition: 0.5s;
+    z-index: +7;
+}
+.change .bar1{
+    transform: translateX(150px) rotate(45deg) translate(-5px,9px) ;
+}
+.change .bar3{
+    transform: translateX(150px) rotate(-45deg) translate(-5px,-9px);
+}
+.change .bar2{
+    display: none;
+}
+.change .menu li{
+    margin-top: 40px;
+    background-color: var(--navcolor);
+    padding: 10px;
+    list-style-type: none;
+}
+.change .menu li:nth-child(1){
+    margin-top: 65px;
+}
+.change .menu li a{
+    width: 120px;
+    margin-top: 10px;
+    position: relative;    /*I M P O R T A N T*/
+    border-radius: 10px;
+}
+.change .menu li a{
+    color: #cccccc;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.change .menu li a:hover{
+    color: white;
+    /* border-bottom: 2px solid white; */
+}
+.change .menu li a::before{      /*OR after*/
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 162, 255);
+    height: 2px;
+    width: 0%;
+    left: 0px;
+    bottom: -3px;
+    transition: all 0.2s ease-in-out;
+}
+.change .menu li a:active::before{
+    width: 100%;
+}
+
+@keyframes sidemenu{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 170px;
+    }
+}
+
+
+}
+@media only screen and (max-width:376px){
+    /* #contact-head{
+       margin-top: 50px; 
+    } */
+    .more h1{
+        margin-top: -100px;
+    }
+    .form input:focus{
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width:970px) and (min-width:660px){
+    #quote::before{
+        width: 60%;
+    }
+}
+
+.barmenu{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
